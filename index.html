@@ -19,25 +19,22 @@
 </audio>
 </section> -->
 
-
-     <div class="section_top">
-  <div  class="content">
-    <h1>
-    <span>lovely</span> <span style="color: rgb(255, 4, 92)">Day</span>
-    <span>Venessa</span>
-    </h1>
-    <!---
-    <a href="#">Welcome</a> --->
-  </div>
- </div>
+<audio id="music" style="width:100%; height:17px;" controls autoplay>
+        <source src="audio/C_line_Dion_-_A_New_Day_Has_Come_(Jesusful.com).mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
 
 
-
-
-
-
-
-
+<div class="section_top">
+<div  class="content">
+<h1>
+<span>Lovely</span> <span style="color: rgb(255, 4, 92)">Day</span>
+<span>Venessa</span>
+</h1>
+<!---
+<a href="#">Welcome</a> --->
+</div>
+</div>
 
 
 <script>
@@ -216,6 +213,26 @@ const h1 = document.querySelectorAll("h1 span");
 
 h1.forEach((el) => new TextDesintegrator(el));
 
+/////
+const audio = document.getElementById('music');
+
+// Play the audio
+function playAudio() {
+    audio.play();
+}
+
+// Stop the audio
+function stopAudio() {
+    audio.pause();
+    audio.currentTime = 0; // Reset the playback to the beginning
+}
+////
+window.addEventListener("DOMContentLoaded", event => {
+  const audio = document.querySelector("audio");
+  audio.volume = 0.2;
+  audio.play();
+});
+///
 </script>
-  </body>
+</body>
 </html>
