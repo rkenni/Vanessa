@@ -1,10 +1,13 @@
 body{
+  background: #ddd;
+  font-family: "Raleway";
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100vh;
   font-family: sans-serif;
 }
+
 
 .section_top{
   width: 100%;
@@ -37,15 +40,21 @@ body{
 }
 
 .content a{
-  background:#85c1ee;
+  background:red;
   padding: 10px 24px;
   text-decoration: none;
   font-size: 18px;
   border-radius: 20px;
+  position: relative;
+  height:200px;
+  right: 20;
+   margin-top:right;
+   margin-right:0%;
 }
 .content a:hover{
-  background: #034e88;
-  color: #fff;
+  /*background: #034e88;*/
+    background: pink;
+     color: white;
 }
 
 canvas {
@@ -63,6 +72,64 @@ canvas {
 .td-hide {
   opacity: 0;
 }
+
+
+.center {
+  position:absolute;
+  top:50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  background-color: red;
+  
+  }
+  .button{
+      background-color: red;
+  }
+  .center:hover{
+      transition: 0.7s;
+  }
+  .popup{
+      width:350px;
+      height:280px;
+      padding: 30px 20px;
+      background: #f5f5f5;
+      border-radius:10px;
+      box-sizing: border-box;
+      z-index: 2;
+      text-align: center;
+      opacity: 0;
+      top:-200%;
+      transform: translate(-50%, -50%) scale(0.5);
+      transition: opacity 300ms ease-in-out;
+                  top: 1000ms ease-in-out;
+                  transform: 1000ms ease-in-out;
+  }
+  
+  .popup.active{
+      opacity: 1;
+      top:50%;
+      transform: translate(-50%,-50%) scale(1);
+      transition: transform 300ms cubic-bezier(0.18,0.89.0.43,1.19);
+  }
+  .popup .icon {
+      margin:5px 0px;
+      width:50px;
+      height:50px;
+      border:2px solid #34f234;
+      text-align:center;
+      display:inline-block;
+      border-radius: 50%;
+      line-height:60px;
+  }
+   
+  
+  @property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+  }
+
+
 
 @keyframes change {
   0%
@@ -244,4 +311,60 @@ body {
   left: 70%;
   top: 60%;
   animation-delay: -0.4s;
+}
+
+
+}
+.popup .title {
+    margin: 5px 0px;
+    font-size:30px;
+    font-weight:600;
+}
+.popup .desscription {
+    color: #222;
+    font-size:15px;
+    padding:5px;
+}
+.popup .dismiss-btn{
+    margin-top: 15px;
+}
+.popup .dismiss-btn button{
+    padding: 10px 20px;
+    background:red;
+    color: #f5f5f5;
+    border:2px solid red;
+    font-size:16px;
+    font-weight: 600;
+    outline:none;
+    border-radius:10px;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+.popup .dismiss-btn button:hover{
+    color:#111;
+    background:#f5f5f5;
+}
+.pop > div{
+    position: relative;
+    top:10px;
+    opacity: 0;
+}
+.popup.active > div{
+    top:0px;
+    opacity: 1;
+}
+.popup.active .icon {
+    transition: all 300ms ease-in-out 250ms;
+}
+
+.popup.active .title {
+    transition: all 300ms ease-in-out 300ms;
+}
+
+.popup.active .desscription {
+    transition: all 300ms ease-in-out 350ms;
+}
+
+.popup.active .dismiss-btn {
+    transition: all 300ms ease-in-out 400ms;
 }

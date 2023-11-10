@@ -3,27 +3,25 @@
   <head>
     <meta charset="utf-8">
   <meta name="keywords" content="HTML, CSS, JavaScript">
-  <meta name="author" content="kennedy Doe">
+  <meta name="author" content="kennedy ">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vanessa</title>
     <link rel="stylesheet" href="css/App.css"/>
-
-
-  </head>
+</head>
 
 
   <body>
-<!-- <section style="width:100%" >
+<!--<section style="width:100%" >
    <audio style="width:100%" controls autoplay muted>
 <source src ="Audio/Burna Boy - For My Hand feat. Ed Sheeran.mp3" type="audio/mp3">
 </audio>
 </section> -->
 
-<audio id="music" style="width:100%; height:17px;" controls autoplay>
+<audio id="music" style="width:100%; height:16px;" controls autoplay>
         <source src="audio/C_line_Dion_-_A_New_Day_Has_Come_(Jesusful.com).mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-
+ 
 
 <div class="section_top">
 <div  class="content">
@@ -31,14 +29,52 @@
 <span>Lovely</span> <span style="color: rgb(255, 4, 92)">Day</span>
 <span>Venessa</span>
 </h1>
-<!---
-<a href="#">Welcome</a> --->
 </div>
 </div>
+
+<div class="popup center">
+  <div class="icon">
+    <i class="fa fa-check"></i>
+  </div>
+  <div class="title">
+      Sunshine💝
+  </div>
+  <div class="description">
+      Hey Stephanie ! Just wanted to say good morning and let you know that you’re always on my mind.
+      Hope your day treats you well,Take care Miss Pretty 💞💝
+  </div>
+  <div class="dismiss-btn">
+      <button id="dismiss-popup-btn">
+          Dismiss
+      </button>
+  </div>
+</div>
+<div class="center">
+  <button id="open-popup-btn">
+    Message
+  </button>
+</div>
+
+  
 <div class="firework"></div>
 <div class="firework"></div>
 <div class="firework"></div>
+
+
 <script>
+
+///Message box /////
+document.getElementById("open-popup-btn").addEventListener("click",function(){
+            document.getElementsByClassName("popup")
+            [0].classList.add("active");
+        });
+
+        document.getElementById("dismiss-popup-btn").addEventListener("click",function(){
+            document.getElementsByClassName("popup")
+            [0].classList.remove("active");
+        });
+//// end of Message box /////
+  
 
 class TextDesintegrator {
   constructor(el, options) {
