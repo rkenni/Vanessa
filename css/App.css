@@ -14,7 +14,7 @@ body{
   height: 100%;
   overflow: hidden;
   position: relative;
-  background: url("../images/vvvv.jpg");
+  background: url("../images/vvvv.jpg"); 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
