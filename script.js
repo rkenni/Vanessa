@@ -9,7 +9,7 @@ document.getElementById("open-popup-btn").addEventListener("click",function(){
             [0].classList.remove("active");
         });
 //// end of Message box /////
-  
+
 
 class TextDesintegrator {
   constructor(el, options) {
